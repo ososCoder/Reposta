@@ -1,0 +1,87 @@
+.Header-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1.5rem;
+}
+
+.Header-header > h1 {
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+/*HEADER NAV MENU ICONS*/
+.menu {
+  font-size: 1.5rem;
+}
+
+.menu-close {
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+  animation: rotate 0.5s ease-out;
+}
+@keyframes rotate {
+  100% {
+    rotate: 360deg;
+  }
+}
+
+/*HEADER NAV*/
+.Header-nav-false {
+  display: none;
+}
+
+.Header-nav-true {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: brown;
+  width: 70%;
+  height: 100%;
+  animation: menu 0.5s ease-out;
+}
+@keyframes menu {
+  0% {
+    translate: 100%;
+    opacity: 0.5;
+  }
+  100% {
+    translate: 0%;
+  }
+}
+
+/*HEADER NAV MENU*/
+.Header-nav-true > ul {
+  list-style: none;
+  position: relative;
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 1.5rem;
+}
+
+.Header-nav-true > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.Header-menu-icons {
+  font-size: 1.5rem;
+}
+
+/*MEDIA QUERIES*/
+@media (min-width: 760px) {
+  .Header-nav-true,
+  .Header-nav-false {
+    display: block;
+  }
+
+  .menu,
+  .menu-close {
+    display: none;
+  }
+} ;
